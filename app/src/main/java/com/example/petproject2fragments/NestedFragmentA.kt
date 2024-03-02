@@ -21,8 +21,7 @@ class NestedFragmentA: BindingFragment<FragmentANestedBinding>() {
         binding.titleNestedFragmentA.text = (requireActivity() as SongNameProvider).getSongName().plus(other = " | A")
         binding.button.setOnClickListener {
             parentFragmentManager.commit {
-                replace(R.id.fragment_child_container, NestedFragmentB())
-                addToBackStack(null)
+                (parentFragment as SelectPage).navigateTo(page = 1)
             }
         }
     }
