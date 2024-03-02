@@ -4,9 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
 class MainActivity : AppCompatActivity(), SongNameProvider {
-
-    private var fragmentName: String = ""
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -16,7 +13,5 @@ class MainActivity : AppCompatActivity(), SongNameProvider {
                 .commit()
         }
     }
-
-
     override fun getSongName(): String = "Muse - Starlight"
 }
